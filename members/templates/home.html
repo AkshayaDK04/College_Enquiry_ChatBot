@@ -1,0 +1,114 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chatbot</title>
+    <link rel="stylesheet" href="{% static 'stylehome.css' %}">
+
+    <link rel="stylesheet" href="{% static 'stylehome.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <style>
+        .chatbot {
+            display: none; 
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg" id="navbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html" id="logo"><span>T</span>CE Chatbot</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+          <span><i class="fa-solid fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'signin' %}">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'signup' %}">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'chatbot' %}">query</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Home Section Start -->
+    <section id="home">
+      <div class="content">
+        <h3><strong>Start Your Journey with <br> Our College Enquiry Chatbot</strong></h3>
+       
+        <p>
+          Welcome to our College Enquiry Chatbot, your trusted guide for all college-related information.
+          <br> Discover detailed course offerings, campus facilities, and stay updated on the latest events.
+          <br> Our chatbot is designed to provide you with accurate and timely information,
+          <br>helping you make informed decisions every step of the way.<br>
+        </p>
+        <button id="btn">Learn More</button>
+      </div>
+    </section>
+    <!-- Home Section End -->
+
+    <!-- About Us Section Start -->
+    <div class="about" id="about">
+      <div class="container">
+        <div class="heading">About <span>Us</span></div>
+        <div class="row">
+          <div class="col-md-6">
+            <img src="{% static 'tce1.jpg' %}" alt="clg chatbot">
+          </div>
+          <div class="col-md-6">
+            <h3><strong>What Makes Our College Enquiry Chatbot Unique?</strong></h3>
+            <p>
+              Our College Enquiry Chatbot is dedicated to providing a seamless and personalized information experience. 
+              We combine advanced technology with comprehensive data to ensure you have access to accurate and up-to-date details about our college.
+              <br><br>Whether you're exploring course offerings, learning about campus facilities, or seeking the latest events, our chatbot is here to assist you with ease.
+              <br><br>Experience the convenience and reliability of our College Enquiry Chatbot as it guides you through every step of your academic journey.<br>
+            </p>
+            <button id="about-btn">Learn More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const queryLink = document.querySelector('a[href="#query"]');
+            const chatbotSection = document.querySelector('.chatbot');
+            
+            queryLink.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default anchor behavior
+                chatbotSection.style.display = 'block'; // Show the chatbot
+                chatbotSection.scrollIntoView({ behavior: 'smooth' }); // Scroll to the chatbot section
+            });
+        });
+      </script>
+  
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  </body>
+  </html>

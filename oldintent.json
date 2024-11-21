@@ -1,0 +1,898 @@
+{
+    "intents": [
+
+
+
+
+
+            {
+                    "tag": "greeting",
+                    "patterns": [
+                            "Hi",
+                            "How are you",
+                            "Is anyone there?",
+                            "Hello",
+                            "Good day",
+                            "Whats up",
+                            "how are ya",
+                            "heyy",
+                            "hey",
+                            "whatsup"
+                    ],
+                    "responses": [
+                            "Hello!",
+                            "Good to see you again!",
+                            "Hi there, how can I help?"
+                    ],
+                    "context_set": ""
+            },
+            {
+                    "tag": "goodbye",
+                    "patterns": [
+                            
+                            "see you",
+                            "bye bye",
+                            "See you later",
+                            "Goodbye",
+                            "I am Leaving",
+                            "Bye",
+                            "Have a Good day",
+                            "talk to you later",
+                            "tyyl",
+                            "i got to go",
+                            "gtg"
+                    ],
+                    "responses": [
+                            "Sad to see you go :(",
+                            "Talk to you later",
+                            "Goodbye!",
+                            "Come back soon"
+                    ],
+                    "context_set": ""
+            },
+            {
+                    "tag": "creator",
+                    "patterns": [
+
+                            "what is the name of your developers",
+                            "what is the name of your creators",
+                            "what is the name of the developers",
+                            "what is the name of the creators",
+                            "who created you",
+                            "manufacturer",
+                            "manufacturers",
+                            "who manufactured you?",
+                            "your developers",
+                            "your creators",
+                            "who are your developers",
+                            "developer",
+                            "developers",
+                            "you are made by",
+                            "you are made by whom",
+                            "who created you",
+                            "who create you",
+                            "creators",
+                            "creator",
+                            "god",
+                            "who made you",
+                            "who designed you"
+                    ],
+                    "responses": [
+                            "Akshaya, Dharsana and Anitha created me for their final year project in 2023",
+                            "Anitha, Dharsana and Akshaya created me for their final year project in 2023",
+                            "Akshaya, Dharsana and Anitha are my creators",
+                            "I have been developed by Akshaya, Dharsana and Anitha"
+                   ],
+                    "context_set": ""
+            },
+            {
+                    "tag": "name",
+                    "patterns": [
+                            "name",
+                            "your name",
+                            "do you have a name",
+                            "what are you called",
+                            "what is your name",
+                            "what should I call you",
+                            "whats your name?",
+                            "what are you",
+                            "who are you",
+                            "who is this",
+                            "what am i chatting to",
+                            "who am i taking to",
+                            "what are you"
+                    ],
+                    "responses": [
+                            "I am a College Enquiry Chatbot, specifically designed for Thiagarajar College of Engineering. You can call me TCE chatbot.",
+                            "I am College Enquiry Chatbot.",
+                            "I identify as TCE chatbot.",
+                            "My creators call me by the name of TCE chatbot."
+        ],
+                    "context_set": ""
+            },
+           
+          
+              
+            {
+                    "tag": "about_college",
+                    "patterns": [
+                        "Tell me about the college.",
+                        "What can you tell me about the college?",
+                        "I want to know more about the college.",
+                        "Can you provide information about the college?",
+                        "What is special about the college?",
+                        "Tell me some key facts about the college.",
+                        "How would you describe the college?",
+                        "Is the college known for any specific achievements?",
+                        "What is the college's mission and vision?",
+                        "Can you give me an overview of the college?",
+                        "What are the highlights of the college?",
+                        "What makes the college unique?",
+                        "What is the college's educational philosophy?"
+                    ],
+                    "responses": [
+                        "Thiagarajar Engineering College, founded in 1830 as the General Assembly's Institution, is a renowned educational institution in North Calcutta, India. Rev. Alexander Duff, the first missionary from the Church of Scotland to India, established the college with the aim of integrating Western education and Christian mission for the progress of the people. Today, the college upholds its founder's vision by striving for academic excellence, social awareness, and character development. It has produced notable individuals such as Swami Vivekananda and Netaji Subhas Chandra Bose. The college is affiliated with the University of Calcutta and holds autonomous status for its postgraduate studies. It offers undergraduate honors courses in 15 subjects and postgraduate courses in two subjects. Additionally, the college's Department of Teacher Education prepares women students for the Bachelor of Education degree. With its rich heritage and commitment to holistic development, Thiagarajar Engineering College has garnered recognition as one of the top fifty colleges in India. To know more about Our college and college history visit <a target=\"_blank\"href=\"https://www.tce.edu/the-college.php\">website</a>."
+                    ],
+                    "context_set": ""
+            },
+           
+           
+
+            {
+                    "tag": "admission",
+                    "patterns": [
+                            "what is the process of admission",
+                            "what is the admission process",
+                            "How to take admission in your college",
+                            "What is the process for admission",
+                            "admission",
+                            "admission process",
+                            "eligibility for admission",
+                            "eligibility",
+                            "what is the eligibility",
+                            "eligibility criteria",
+                            "eligibility criteria for enigineering",
+                            "admission engineering"
+                    ],
+                    "responses": [
+                            "The entire Admission process is carried out in online mode. Refer <a target=\"_blank\"href=\"https://www.tce.edu/admissions.php\">website</a>"
+                    ],
+                    "context_set": ""
+            },
+            {
+                    "tag": "facilities",
+                    "patterns": [
+                            "What facilities college provide",
+                            "College facility",
+                            "What are college facilities",
+                            "facilities",
+                            "facilities provided"
+                    ],
+                    "responses": [
+                            "Thiagarajar Engineering College provides several facilities. Refer <a target=\"_blank\"href=\"https://www.tce.edu/other_facilities.php\">website</a>"
+                    ],
+                    "context_set": ""
+            },
+            {
+                    "tag": "uniform",
+                    "patterns": [
+                            "college dress code",
+                            "college dresscode",
+                            "what is the uniform",
+                            "can we wear casuals",
+                            "Does college have an uniform",
+                            "Is there any uniform",
+                            "uniform",
+                            "what about uniform",
+                            "do we have to wear uniform"
+                    ],
+                    "responses": [
+                            "Thiagarajar Engineering College does have uniform but only on specified days - lab classes"
+                    ],
+                    "context_set": ""
+            },
+            {
+                "tag": "courses",
+                "patterns": [
+                  "What are the courses?",
+                  "Tell me about the courses offered",
+                  "Which courses are available?",
+                  "List of courses in the college",
+                  "What programs do you offer?",
+                  "What academic programs do you have?",
+                  "Can you tell me about the courses?",
+                  "Tell me the courses you provide"
+                ],
+                "responses": [
+                  "We offer undergraduate programs in Engineering, Arts, Science, and Business Administration. Visit our website for the full list."
+                ]
+              },
+              {
+                "tag": "departments",
+                "patterns": [
+                  "Tell me about the departments",
+                  "List of academic departments",
+                  "Which departments are available?",
+                  "What departments do you have?",
+                  "What branches are there?",
+                  "Can you provide the list of departments?",
+                  "Departments in your college"
+                ],
+                "responses": [
+                  "Our college includes departments in Engineering, Science, and Humanities. For more details, visit our website."
+                ]
+              },
+              
+
+            {
+                "tag": "hours",
+                "patterns": [
+                        "timing of college",
+                        "what is college timing",
+                        "working days",
+                        "when are you guys open",
+                        "what are your hours",
+                        "hours of operation",
+                        "when is the college open",
+                        "college timing",
+                        "what about college timing",
+                        "is college open on saturday",
+                        "tell something about college timing",
+                        "what is the college  hours",
+                        "when should i come to college",
+                        "when should i attend college",
+                        "what is my college time",
+                        "college timing",
+                        "timing college"
+                ],
+                "responses": [
+                        "Gates are open 9:00 am to 4:15 pm, Monday-Friday!",
+                        "The college is 9:00 am to 4:15 pm on working days."
+                ],
+                "context_set": ""
+        },
+        {
+                "tag": "number",
+                "patterns": [
+
+                        "more info",
+                        "contact info",
+                        "how to contact college",
+                        "college telephone number",
+                        "college number",
+                        "What is your contact no",
+                        "Contact number?",
+                        "how to call you",
+                        "College phone no?",
+                        "how can i contact you",
+                        "Can i get your phone number",
+                        "how can i call you",
+                        "phone number",
+                        "phone no",
+                        "call"
+                ],
+                "responses": [
+                        "Here's the contact details: <br>Email: principal@tce.ac.in<br>College Main Office: +91 33 2350 3862<br>   TCE,Tiruparankundram"
+                ],
+                "context_set": ""
+        },
+        
+        {
+                "tag": "fees",
+                "patterns": [
+                        "information about fee",
+                        "information on fee",
+                        "tell me the fee",
+                        "college fee",
+                        "fee per semester",
+                        "what is the fee of each semester",
+                        "what is the fees of each year",
+                        "what is fee",
+                        "what is the fees",
+                        "how much is the fees",
+                        "fees for first year",
+                        "fees",
+                        "about the fees",
+                        "tell me something about the fees"
+                ],
+                "responses": [
+                        "For Fee details visit <a target=\"_blank\" href=\"https://r.search.yahoo.com/_ylt=AwrKDzUHlg5n8gEAPKS7HAx.;_ylu=Y29sbwNzZzMEcG9zAzcEdnRpZAMEc2VjA3Ny/RV=2/RE=1730218759/RO=10/RU=https%3a%2f%2fwww.tce.edu%2fsites%2fdefault%2ffiles%2f2022-09%2fAdmission-BE-BTech-2022-23-Round-I.pdf/RK=2/RS=UotmCp2K6ZoTKmdgANZ3P2Bl8Dc-\"> here</a>"
+                ],
+                "context_set": ""
+        },
+        {
+                "tag": "location",
+                "patterns": [
+                        "where is the college located",
+                        "college is located at",
+                        "where is college",
+                        "where is college located",
+                        "address of college",
+                        "how to reach college",
+                        "college location",
+                        "college address",
+                        "wheres the college",
+                        "how can I reach college",
+                        "whats is the college address",
+                        "what is the address of college",
+                        "address",
+                        "location"
+                ],
+                "responses": [
+                        "<br>For more details visit <a target=\"_blank\" href=\"https://www.google.com/maps?ll=22.588183,88.370013&z=16&t=m&hl=en-US&gl=US&mapclient=embed&cid=6975002640564038702\"> here</a>"
+                                                                    
+                ],
+                "context_set": ""
+        },
+        {
+                "tag": "hostel",
+                "patterns": [
+                        "hostel facility",
+                        "hostel servive",
+                        "hostel location",
+                        "hostel address",
+                        "hostel facilities",
+                        "hostel fees",
+                        "Does college provide hostel",
+                        "Is there any hostel",
+                        "Where is hostel",
+                        "do you have hostel",
+                        "do you guys have hostel",
+                        "hostel",
+                        "hostel capacity",
+                        "what is the hostel fee",
+                        "how to get in hostel",
+                        "what is the hostel address",
+                        "how far is hostel from college",
+                        "hostel college distance",
+                        "where is the hostel",
+                        "how big is the hostel",
+                        "distance between college and hostel",
+                        "distance between hostel and college"
+                ],
+                "responses": [
+                        "Thiagarajar Engineering College provides safe and affordable hostel facilities for boys and girls. For more details visit <a target=\"_blank\" href=\"https://www.tce.edu/hostel.php\"> here</a>"
+                                                                    
+           ],
+                "context_set": ""
+        },
+        
+        {
+                "tag": "library",
+                "patterns": [
+                        "is there any library",
+                        "library facility",
+                        "library facilities",
+                        "do you have library",
+                        "does the college have library facility",
+                        "college library",
+                        "where can i get books",
+                        "book facility",
+                        "Where is library",
+                        "Library",
+                        "Tell me about library",
+                        "how many libraries"
+                ],
+                "responses": [
+                        "The college has a well- equipped automated library containing more than 1,18,000 books and 13402 journals. It serves as the hive of academic activities for students, scholars and faculty members in the pursuit of excellence in their respective area of academic pursuits. The library is fully automated with the utilisation of the LIBSYS software. Internet access from the library is available with a small number of computers for staff and students for searching digitized catalogues. Access to online journals and bibliographic databases is provided to the faculty members through the UGC Information and Library Network (INFLIBNET). The efforts to transform into a fully digital library are underway.<br><br>For more details visit <a target=\"_blank\" href=\"https://www.tce.edu/library.php\"> here</a>"
+                ],
+                "context_set": ""
+        },
+        {
+                "tag": "placement",
+                "patterns": [
+                        "What is college placement",
+                        "Which companies visit in college",
+                        "What is average package",
+                        "companies visit",
+                        "package",
+                        "placement",
+                        "recruitment",
+                        "companies",
+                        "is there any placement cell?",
+                        "placement cell",
+                        "tell me about placement cell"
+                ],
+                "responses": [
+                        "The Placement Cell of Thiagarajar Engineering College,Madurai creates a platform where final year students can showcase their skills & talent which different companies seek to explore. For more information visit <a target=\"_blank\" href=\"https://www.tce.edu/placement_cell.php\">here</a>",
+                        "Our college oragnise various activities related to placements.For latest update visit <a target=\"_blank\" href=\"https://www.tce.edu/placement_cell.php\">here</a>"
+                ],
+                "context_set": ""
+        },
+        
+
+            {
+                "tag": "principal",
+                "patterns": [
+                    "Who is the principal?",
+                    "Tell me about the principal.",
+                    "What does the principal do?",
+                    "Who is the current principal?"
+                ],
+                "responses": [
+                    "The principal of TCE is Dr.L. Ashok Kumar. You can contact him at principal [at] tce [dot] edu."
+                ]
+            },
+            
+            {
+                    "tag": "college_achievements",
+                    "patterns": [
+                        "achievements",
+                        "achievement",
+                        "What are some notable achievements of the college?",
+                        "Tell me about the college's achievements.",
+                        "Can you share some accomplishments of the college?",
+                        "What notable milestones has the college reached?",
+                        "Are there any specific awards or recognitions received by the college?",
+                        "Tell me about the college's success stories.",
+                        "What are some impressive achievements of the college?",
+                        "Can you provide information about the college's accomplishments?",
+                        "Has the college received any accolades or honors?",
+                        "What significant contributions has the college made?",
+                        "Tell me about the college's achievements in the past years.",
+                        "What are some remarkable successes of the college?",
+                        "Has the college been recognized for any specific achievements?",
+                        "Can you share some examples of the college's achievements?",
+                        "Tell me about the college's notable accomplishments.",
+                        "What milestones has the college achieved in its history?",
+                        "Has the college made any groundbreaking discoveries or innovations?",
+                        "Tell me about the college's impact on the community or society.",
+                        "What are some extraordinary feats of the college?",
+                        "Has the college received any special commendations?"
+                    ],
+                    "responses": [
+                        "Our college has achieved numerous notable accomplishments over the years. Some of these include academic excellence, research breakthroughs, community engagement initiatives, and successful collaborations with industry partners. For more details visit <a target=\"_blank\"href=\"https://www.tce.edu/achievements-college.php\">website</a>.",
+                        "The college takes pride in its impressive achievements, which range from academic achievements of students and faculty to research advancements and impactful community projects. These accomplishments reflect our commitment to excellence and innovation. For more details visit <a target=\"_blank\"href=\"https://www.tce.edu/achievements-college.php\">website</a>."
+                    ],
+                    "context_set": ""
+            },
+
+            {
+                "tag": "faculty_dr_mercy_shalinie",
+                "patterns": [
+                    "Who is Dr. S. Mercy Shalinie?",
+                    "Tell me about Dr. S. Mercy Shalinie",
+                    "What does Dr. S. Mercy Shalinie teach?"
+                ],
+                "responses": [
+                    "Dr. S. Mercy Shalinie is a Professor, Head, and Dean (MIS) at TCE. You can contact her at shalinie [at] tce [dot] edu."
+                ]
+            },
+            {
+                "tag": "faculty_dr_sivakumar",
+                "patterns": [
+                    "Who is Dr. M. Sivakumar?",
+                    "Tell me about Dr. M. Sivakumar",
+                    "What does Dr. M. Sivakumar teach?"
+                ],
+                "responses": [
+                    "Dr. M. Sivakumar is an Associate Professor at TCE. You can reach him at mskcse [at] tce [dot] edu."
+                ]
+            },
+            {
+                "tag": "faculty_dr_sundarakantham",
+                "patterns": [
+                    "Who is Dr. K. Sundarakantham?",
+                    "Tell me about Dr. K. Sundarakantham",
+                    "What does Dr. K. Sundarakantham teach?"
+                ],
+                "responses": [
+                    "Dr. K. Sundarakantham is a Professor at TCE. You can contact him at kskcse [at] tce [dot] edu."
+                ]
+            },
+            {
+                "tag": "faculty_dr_senthilkumar",
+                "patterns": [
+                    "Who is Dr. C. Senthilkumar?",
+                    "Tell me about Dr. C. Senthilkumar",
+                    "What does Dr. C. Senthilkumar teach?"
+                ],
+                "responses": [
+                    "Dr. C. Senthilkumar is an Associate Professor at TCE. You can reach him at cskcse [at] tce [dot] edu."
+                ]
+            },
+            {
+                "tag": "faculty_dr_kavitha_devi",
+                "patterns": [
+                    "Who is Dr. M. K. Kavitha Devi?",
+                    "Tell me about Dr. M. K. Kavitha Devi",
+                    "What does Dr. M. K. Kavitha Devi teach?"
+                ],
+                "responses": [
+                    "Dr. M. K. Kavitha Devi is a Professor at TCE. You can contact her at mkkdit [at] tce [dot] edu."
+                ]
+            },
+            {
+                "tag": "faculty_dr_subbulakshmi",
+                "patterns": [
+                    "Who is Dr. B. Subbulakshmi?",
+                    "Tell me about Dr. B. Subbulakshmi",
+                    "What does Dr. B. Subbulakshmi teach?"
+                ],
+                "responses": [
+                    "Dr. B. Subbulakshmi is an Assistant Professor at TCE. You can reach her at bscse [at] tce [dot] edu."
+                ]
+            },
+            {
+                "tag": "faculty_dr_emil_selvan",
+                "patterns": [
+                    "Who is Dr. G. S. R. Emil Selvan?",
+                    "Tell me about Dr. G. S. R. Emil Selvan",
+                    "What does Dr. G. S. R. Emil Selvan teach?"
+                ],
+                "responses": [
+                    "Dr. G. S. R. Emil Selvan is an Associate Professor at TCE. You can contact him at emil [at] tce [dot] edu."
+                ]
+            },
+            {
+                "tag": "faculty_dr_vijayalakshmi",
+                "patterns": [
+                    "Who is Dr. M. Vijayalakshmi?",
+                    "Tell me about Dr. M. Vijayalakshmi",
+                    "What does Dr. M. Vijayalakshmi teach?"
+                ],
+                "responses": [
+                    "Dr. M. Vijayalakshmi is a Professor at TCE. You can reach her at mviji [at] tce [dot] edu."
+                ]
+            },
+            {
+                "tag": "faculty_dr_prasanna",
+                "patterns": [
+                    "Who is Dr. S. Prasanna?",
+                    "Tell me about Dr. S. Prasanna",
+                    "What does Dr. S. Prasanna teach?"
+                ],
+                "responses": [
+                    "Dr. S. Prasanna is an Associate Professor at TCE. You can contact him at sprcse [at] tce [dot] edu."
+                ]
+            },
+            {
+                "tag": "faculty_dr_shivakumar",
+                "patterns": [
+                    "Who is Dr. N. Shivakumar?",
+                    "Tell me about Dr. N. Shivakumar",
+                    "What does Dr. N. Shivakumar teach?"
+                ],
+                "responses": [
+                    "Dr. N. Shivakumar is an Assistant Professor at TCE. You can reach him at shiva [at] tce [dot] edu."
+                ]
+            },
+            {
+                "tag": "faculty_dr_ramkumar",
+                "patterns": [
+                    "Who is Dr. M. P. Ramkumar?",
+                    "Tell me about Dr. M. P. Ramkumar",
+                    "What does Dr. M. P. Ramkumar teach?"
+                ],
+                "responses": [
+                    "Dr. M. P. Ramkumar is an Associate Professor at TCE. You can contact him at ramkumar [at] tce [dot] edu."
+                ]
+            },
+            {
+                "tag": "faculty_dr_madhupriya",
+                "patterns": [
+                    "Who is Dr. G. Madhupriya?",
+                    "Tell me about Dr. G. Madhupriya",
+                    "What does Dr. G. Madhupriya teach?"
+                ],
+                "responses": [
+                    "Dr. G. Madhupriya is an Associate Professor at TCE. You can reach her at gmadhupriya [at] tce [dot] edu."
+                ]
+            },
+            {
+                "tag": "faculty_dr_narasima_mallikarjunan",
+                "patterns": [
+                    "Who is Dr. K. Narasima Mallikarjunan?",
+                    "Tell me about Dr. K. Narasima Mallikarjunan",
+                    "What does Dr. K. Narasima Mallikarjunan teach?"
+                ],
+                "responses": [
+                    "Dr. K. Narasima Mallikarjunan is an Associate Professor at TCE. You can contact him at arjunkambaraj [at] tce [dot] edu."
+                ]
+            },
+            {
+                "tag": "faculty_dr_leena_sri",
+                "patterns": [
+                    "Who is Dr. R. Leena Sri?",
+                    "Tell me about Dr. R. Leena Sri",
+                    "What does Dr. R. Leena Sri teach?"
+                ],
+                "responses": [
+                    "Dr. R. Leena Sri is an Associate Professor at TCE. You can reach her at rlsit [at] tce [dot] edu."
+                ]
+            },
+            {
+                "tag": "faculty_dr_nirmala_devi",
+                "patterns": [
+                    "Who is Dr. M. Nirmala Devi?",
+                    "Tell me about Dr. M. Nirmala Devi",
+                    "What does Dr. M. Nirmala Devi teach?"
+                ],
+                "responses": [
+                    "Dr. M. Nirmala Devi is an Assistant Professor (Selection Grade) at TCE. You can contact her at mnit [at] tce [dot] edu."
+                ]
+            },
+            {
+                "tag": "faculty_dr_indira",
+                "patterns": [
+                    "Who is Dr. K. Indira?",
+                    "Tell me about Dr. K. Indira",
+                    "What does Dr. K. Indira teach?"
+                ],
+                "responses": [
+                    "Dr. K. Indira is an Assistant Professor at TCE. You can reach her at kiit [at] tce [dot] edu."
+                ]
+            },
+            {
+                "tag": "faculty_dr_lavanya",
+                "patterns": [
+                    "Who is Dr. Raja Lavanya?",
+                    "Tell me about Dr. Raja Lavanya",
+                    "What does Dr. Raja Lavanya teach?"
+                ],
+                "responses": [
+                    "Dr. Raja Lavanya is an Assistant Professor at TCE. You can contact her at rlit [at] tce [dot] edu."
+                ]
+            },
+            {
+                "tag": "faculty_ms_santhiya",
+                "patterns": [
+                    "Who is Ms. C. Santhiya?",
+                    "Tell me about Ms. C. Santhiya",
+                    "What does Ms. C. Santhiya teach?"
+                ],
+                "responses": [
+                    "Ms. C. Santhiya is an Assistant Professor at TCE. You can reach her at csit [at] tce [dot] edu."
+                ]
+            },
+            {
+                "tag": "faculty_mr_nagendrakumar",
+                "patterns": [
+                    "Who is Mr. D. Nagendrakumar?",
+                    "Tell me about Mr. D. Nagendrakumar",
+                    "What does Mr. D. Nagendrakumar teach?"
+                ],
+                "responses": [
+                    "Mr. D. Nagendrakumar is an Assistant Professor at TCE. You can contact him at dnkcse [at] tce [dot] edu."
+                ]
+            },
+            {
+                "tag": "faculty_mr_santhana_hari",
+                "patterns": [
+                    "Who is Mr. S. Santhana Hari?",
+                    "Tell me about Mr. S. Santhana Hari",
+                    "What does Mr. S. Santhana Hari teach?"
+                ],
+                "responses": [
+                    "Mr. S. Santhana Hari is an Assistant Professor at TCE. You can reach him at sshcse [at] tce [dot] edu."
+                ]
+            },
+            {
+                "tag": "faculty_mrs_bhavani",
+                "patterns": [
+                    "Who is Mrs. G. Bhavani?",
+                    "Tell me about Mrs. G. Bhavani",
+                    "What does Mrs. G. Bhavani teach?"
+                ],
+                "responses": [
+                    "Mrs. G. Bhavani is an Assistant Professor at TCE. You can contact her at gbicse [at] tce [dot] edu."
+                ]
+            },
+            {
+                "tag": "faculty_dr_dharani",
+                "patterns": [
+                    "Who is Dr. J. Dharani?",
+                    "Tell me about Dr. J. Dharani",
+                    "What does Dr. J. Dharani teach?"
+                ],
+                "responses": [
+                    "Dr. J. Dharani is an Assistant Professor at TCE. You can reach her at jdicse [at] tce [dot] edu."
+                ]
+            },
+            {
+                "tag": "faculty_dr_anita",
+                "patterns": [
+                    "Who is Dr. N. Anita?",
+                    "Tell me about Dr. N. Anita",
+                    "What does Dr. N. Anita teach?"
+                ],
+                "responses": [
+                    "Dr. N. Anita is an Assistant Professor at TCE. You can contact her at naacse [at] tce [dot] edu."
+                ]
+            },
+            {
+                "tag": "faculty_ms_harine_rajashree",
+                "patterns": [
+                    "Who is Ms. R. Harine Rajashree?",
+                    "Tell me about Ms. R. Harine Rajashree",
+                    "What does Ms. R. Harine Rajashree teach?"
+                ],
+                "responses": [
+                    "Ms. R. Harine Rajashree is an Assistant Professor at TCE. You can reach her at rhrcse [at] tce [dot] edu."
+                ]
+            },
+            {
+                "tag": "faculty_mrs_saradha",
+                "patterns": [
+                    "Who is Mrs. S. Saradha?",
+                    "Tell me about Mrs. S. Saradha",
+                    "What does Mrs. S. Saradha teach?"
+                ],
+                "responses": [
+                    "Mrs. S. Saradha is an Assistant Professor at TCE. You can contact her at ssacse [at] tce [dot] edu."
+                ]
+            },
+            {
+                "tag": "faculty_mrs_jeniba",
+                "patterns": [
+                    "Who is Mrs. S. Jeniba?",
+                    "Tell me about Mrs. S. Jeniba",
+                    "What does Mrs. S. Jeniba teach?"
+                ],
+                "responses": [
+                    "Mrs. S. Jeniba is an Assistant Professor at TCE. You can reach her at sjacse [at] tce [dot] edu."
+                ]
+            },
+
+            {
+                "tag": "holiday_list",
+                "patterns": [
+                    "holiday list",
+                    "What are the holidays in the academic calendar?",
+                    "Can you provide the holiday list?",
+                    "Is there a schedule of holidays available?",
+                    "When are the holidays in the college?",
+                    "Tell me about the holiday list.",
+                    "Are there any breaks or vacations in the academic year?",
+                    "I want to know the list of holidays.",
+                    "Which days are considered holidays in the college?",
+                    "Can you give me information about the college holiday schedule?",
+                    "When is the college closed for holidays?",
+                    "Is there a specific holiday calendar for the college?",
+                    "What days can I expect to have off as per the holiday list?"
+                ],
+                "responses": [
+                    "The list of recess and holidays can be found in the <a target=\"_blank\"href=\"https://www.tce.edu/college_prospectus.php\">college prospectus</a>."
+                ],
+                "context_set": ""
+        },
+
+            {
+                "tag": "college_prospectus",
+                "patterns": [
+                    "Can I get a college prospectus?",
+                    "Where can I find the college prospectus?",
+                    "Is there a prospectus available for the college?",
+                    "Tell me about the college prospectus.",
+                    "How can I obtain the college prospectus?",
+                    "I'm interested in the college prospectus.",
+                    "Where can I get more information about the college?",
+                    "Do you have a prospectus I can review?",
+                    "Can you provide details about the college prospectus?",
+                    "Is there a specific document for the college programs and courses?",
+                    "What is included in the college prospectus?",
+                    "How can I request a copy of the college prospectus?",
+                    "college prospectus"
+                ],
+                "responses": [
+                    "The college prospectus is available for download on our college <a target=\"_blank\"href=\"https://www.tce.edu/college_prospectus.php\">website</a>. It provides detailed information about our academic offerings, admission process, campus facilities, and much more."
+                ],
+                "context_set": ""
+        },
+        
+            {
+                    "tag": "random",
+                    "patterns": [
+                            
+                            "I love you",
+                            "Will you marry me",
+                            "Do you love me"
+                    ],
+                    "responses": [
+                            "I am not program for this please ask appropriate query"
+                    ],
+                    "context_set": ""
+            },
+            {
+                    "tag": "swear",
+                    "patterns": [
+                            "fuck",
+                            "bitch",
+                            "shut up",
+                            "hell",
+                            "stupid",
+                            "idiot",
+                            "dumb ass",
+                            "asshole",
+                            "fucker"
+                    ],
+                    "responses": [
+                            "please use appropriate language",
+                            "Maintaining decency would be appreciated"
+                    ],
+                    "context_set": ""
+            },
+            {
+                    "tag": "salutaion",
+                    "patterns": [
+                            "okk",
+                            "okie",
+                            "nice work",
+                            "well done",
+                            "good job",
+                            "thanks for the help",
+                            "Thank You",
+                            "its ok",
+                            "Thanks",
+                            "k",
+                            "ok",
+                            "okay"
+                    ],
+                    "responses": [
+                            "I am glad I helped you",
+                            "welcome, anything else i can assist you with?"
+                    ],
+                    "context_set": ""
+            },
+            {
+                    "tag": "task",
+                    "patterns": [
+                            "what can you do",
+                            "what are the thing you can do",
+                            "things you can do",
+                            "what can u do for me",
+                            "how u can help me",
+                            "why i should use you"
+                    ],
+                    "responses": [
+                            "I can answer to low-intermediate questions regarding college",
+                            "You can ask me questions regarding TCE college, and i will try to answer them"
+                    ],
+                    "context_set": ""
+            },
+            {
+                    "tag":"ragging",
+                    "patterns":[
+                            "ragging",
+                            "is ragging practice active in college",
+                            "does college have any antiragging facility",
+                            "is there any ragging cases",
+                            "is ragging done here",
+                            "ragging juniors",
+                            "ragging history",
+                            "ragging incidents"
+                            
+                    ],
+                    "responses": [
+                            "We are Proud to tell you that our college provides ragging free environment, and we have strict rules against ragging. For any information <a target=\"_blank\" href=\"https://www.tce.edu/statutory_committees.php\">here</a>"
+                    ]
+
+            },
+            {
+                    "tag":"scholarship",
+                    "patterns":[
+                            "scholarship",
+                            "Is scholarship available",
+                            "available scholarships",
+                            "list of scholarship",
+                            "first year scholarship",
+                            "second year scholarship",																				
+                            "third year scholarship",
+                            "fourth year scholarship"
+                    ],
+                    "responses":[
+                            "Many government scholarships are supported by TCE. For details and updates visit <a target=\"_blank\" href=\"href=\"https://www.tce.edu\">here</a>"
+                    ]
+            },
+            {
+                    "tag":"others",
+                    "patterns":[
+                            "jbjdbcoboc"
+                    ],
+                    "responses":[
+                            "Sorry I couldn't understand your query. Please reiterate or ask me something else. Maybe the college authorities do not have any information to part regarding this matter. Apologize for the inconvenience."
+                    ]
+            }
+            
+    ]
+}
