@@ -1,0 +1,164 @@
+<!-- Fully Enhanced chat.html with Modern UI, Smooth Animations, and Gradients -->
+{% extends "chat/base.html" %}
+
+{% block content %}
+<div class="chat-container">
+    <!-- Header -->
+    <div class="chat-header">
+        <i class="fas fa-robot"></i> TCE Chatbot
+    </div>
+
+    <!-- Chat Messages -->
+    <div class="chat-messages" id="chat-content">
+        {% for message in chat_history %}
+            <!-- User Message -->
+            <div class="message user-message">
+                <div class="bubble user">{{ message.user_query }}</div>
+                <div class="timestamp">{{ message.time|time:"H:i" }}</div>
+            </div>
+
+            <div class="message bot-message">
+                <div class="bubble bot">{{ message.bot_response|safe }}</div> 
+                <div class="timestamp">{{ message.time|time:"H:i" }}</div>
+            </div>
+            
+            
+            <!-- Bot Message -->
+            
+        {% endfor %}
+    </div>
+
+    <!-- Input Form -->
+    <div class="chat-input">
+        <form method="post" class="w-full flex">
+            {% csrf_token %}
+            <input type="text" name="message" class="message-input" placeholder="Type your message..." required>
+            <button type="submit" class="send-button">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </form>
+    </div>
+</div>
+
+<style>
+    .chat-container {
+        width: 100%;
+        max-width: 500px;
+        height: 85vh;
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+        background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+    }
+    .chat-header {
+        background: linear-gradient(135deg, #4f46e5, #1e3a8a);
+        color: white;
+        padding: 15px;
+        font-size: 1.4rem;
+        text-align: center;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .chat-messages {
+        flex: 1;
+        padding: 20px;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .message {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        transition: all 0.3s ease;
+    }
+    .user-message {
+        align-items: flex-end;
+    }
+    .bubble {
+        max-width: 80%;
+        padding: 12px 16px;
+        border-radius: 18px;
+        font-size: 1rem;
+        word-wrap: break-word;
+        animation: fadeIn 0.2s ease-in;
+    }
+    .user .bubble {
+        background: linear-gradient(135deg, #6366f1, #4f46e5);
+        color: white;
+        align-self: flex-end;
+        border-bottom-right-radius: 5px;
+    }
+    .bot .bubble {
+        background: linear-gradient(135deg, #e0f2fe, #bae6fd);
+        color: #1e293b;
+        align-self: flex-start;
+        border-bottom-left-radius: 5px;
+    }
+    .timestamp {
+        font-size: 0.75rem;
+        color: #64748b;
+        margin-top: 5px;
+        text-align: right;
+    }
+    .chat-input {
+        padding: 12px;
+        background: white;
+        display: flex;
+        border-top: 1px solid #cbd5e1;
+        border-radius: 0 0 20px 20px;
+    }
+    .message-input {
+        flex: 1;
+        padding: 12px;
+        border: none;
+        border-radius: 25px;
+        outline: none;
+        font-size: 1rem;
+        background: #f1f5f9;
+        transition: all 0.3s ease;
+    }
+    .message-input:focus {
+        background: #e2e8f0;
+    }
+    .send-button {
+        margin-left: 12px;
+        background: linear-gradient(135deg, #6366f1, #4f46e5);
+        color: white;
+        border: none;
+        padding: 12px 15px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    .send-button:hover {
+        background: #4338ca;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(5px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const chatContent = document.getElementById('chat-content');
+        chatContent.scrollTop = chatContent.scrollHeight;
+    });
+    
+    const form = document.querySelector('form');
+    form.addEventListener('submit', function() {
+        setTimeout(() => {
+            const chatContent = document.getElementById('chat-content');
+            chatContent.scrollTop = chatContent.scrollHeight;
+        }, 100);
+    });
+</script>
+{% endblock %}

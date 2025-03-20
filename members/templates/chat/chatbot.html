@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Inquiry Chatbot</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; }
+        .container { width: 50%; margin: auto; background: white; padding: 20px; border-radius: 10px; }
+        .chat-box { max-height: 300px; overflow-y: auto; padding: 10px; border: 1px solid #ccc; }
+        .chat { margin: 10px 0; }
+        .user { color: blue; }
+        .bot { color: green; }
+        input { width: 100%; padding: 10px; margin-top: 10px; }
+        button { padding: 10px; background: blue; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>College Inquiry Chatbot</h2>
+        <div class="chat-box" id="chat-box">
+            <div class="chat bot">Hello! How can I assist you today?</div>
+        </div>
+        <input type="text" id="user_input" placeholder="Ask me anything...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <script>
+        function sendMessage() {
+            var userText = document.getElementById("user_input").value;
+            var chatBox = document.getElementById("chat-box");
+            chatBox.innerHTML += '<div class="chat user">' + userText + '</div>';
+
+            fetch("/", {
+                method: "POST",
+                body: new URLSearchParams({ "user_input": userText }),
+                headers: { "Content-Type": "application/x-www-form-urlencoded" }
+            })
+            .then(response => response.text())
+            .then(botResponse => {
+                chatBox.innerHTML += '<div class="chat bot">' + botResponse + '</div>';
+                chatBox.scrollTop = chatBox.scrollHeight;
+            });
+
+            document.getElementById("user_input").value = "";
+        }
+    </script>
+</body>
+</html>

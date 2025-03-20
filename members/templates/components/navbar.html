@@ -1,0 +1,20 @@
+<nav class="navbar">
+    <div class="navbar-container">
+        <div class="navbar-brand">
+            <i class="fas fa-robot brand-icon"></i>
+            <span class="brand-text">TCE<span class="brand-highlight">Bot</span></span>
+        </div>
+        
+        <button class="navbar-toggler" id="navToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <div class="navbar-menu" id="navMenu">
+            <a href="#" class="nav-link active">Home</a>
+            <a href="{% url 'signin' %}" class="nav-link">Login</a>
+            <a href="{% url 'signup' %}" class="nav-link">Register</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="{% url 'chatbot' %}" class="nav-link highlight">Start Chat</a>
+        </div>
+    </div>
+</nav>
