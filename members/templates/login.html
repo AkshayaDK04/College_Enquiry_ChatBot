@@ -6,9 +6,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Sign Up Form by Colorlib</title>
+<title>Sign In</title>
 
-<link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-design-iconic-font@2.2.0/css/material-design-iconic-font.min.css">
+
 
 <link rel="stylesheet" href="{% static 'signup.css' %}">
 <meta name="robots" content="noindex, follow">
@@ -25,7 +26,7 @@
 <a href="{% url 'signup' %}" class="signup-image-link">Create an account</a>
 </div>
 <div class="signin-form">
-<h2 class="form-title">Sign up</h2>
+<h2 class="form-title">Sign In</h2>
 <form method="POST" class="register-form" id="login-form">
   {% csrf_token %}
      
@@ -53,23 +54,15 @@
 <input type="submit" name="signin" id="signin" class="form-submit" value="Log in" />
 </div>
 </form>
-<div class="social-login">
-<span class="social-label">Or login with</span>
-<ul class="socials">
-<li><a href="#"><i class="display-flex-center zmdi zmdi-facebook"></i></a></li>
-<li><a href="#"><i class="display-flex-center zmdi zmdi-twitter"></i></a></li>
-<li><a href="#"><i class="display-flex-center zmdi zmdi-google"></i></a></li>
-</ul>
-</div>
+
 </div>
 </div>
 </div>
 </section>
 </div>
 
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="js/main.js"></script>
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="{% static 'js/main.js' %}"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
 <script>
   window.dataLayer = window.dataLayer || [];

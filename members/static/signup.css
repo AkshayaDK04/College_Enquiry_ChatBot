@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+
+
+
 display-flex,.display-flex,.display-flex-center,.signup-content,.signin-content,.social-login,.socials {
     display: flex;
     display: -webkit-flex
@@ -104,6 +110,11 @@ list-type-ulli,.socials {
     src: url(../fonts/poppins/poppins-v5-latin-900.eot);
     src: local("Poppins Black"),local("Poppins-Black"),url(../fonts/poppins/poppins-v5-latin-900.eot?#iefix) format("embedded-opentype"),url(../fonts/poppins/poppins-v5-latin-900.woff2) format("woff2"),url(../fonts/poppins/poppins-v5-latin-900.woff) format("woff"),url(../fonts/poppins/poppins-v5-latin-900.ttf) format("truetype"),url(../fonts/poppins/poppins-v5-latin-900.svg#Poppins) format("svg")
 }
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
 
 a:focus,a:active {
     text-decoration: none;

@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
@@ -245,39 +246,107 @@ def chatbots(request):
     return render(request, "chat/chat.html", {"chat_history": chat_history_display})"""
 
 
-def signin(request):
-    if request.method == 'POST':
-        uname = request.POST.get('username')
-        pass1 = request.POST.get('password')
-        user = authenticate(request, username=uname, password=pass1)
-        if user is not None:
-            login(request, user)
-            return redirect('/')
-        error = 'Username or password is incorrect'
-        return render(request, 'login.html', {'error': error, 'username': uname})
-    return render(request, 'login.html')
+from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.models import User
+from django.core.mail import send_mail
+from django.contrib import messages
+from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
+from django.utils.encoding import force_bytes, force_str
+from django.template.loader import render_to_string
+from django.contrib.auth.tokens import default_token_generator
+from django.http import HttpResponse
 
+# ✅ Secure Signup with Email Verification
 def signup(request):
     if request.method == 'POST':
         uname = request.POST.get('username')
         email = request.POST.get('email')
         pass1 = request.POST.get('password1')
         pass2 = request.POST.get('password2')
+
         if pass1 != pass2:
-            error = 'Passwords do not match'
-            return render(request, 'signup.html', {'error': error, 'username': uname, 'email': email})
+            return render(request, 'signup.html', {'error': 'Passwords do not match', 'username': uname, 'email': email})
+
         if User.objects.filter(username=uname).exists():
-            error = 'Username already exists'
-            return render(request, 'signup.html', {'error': error, 'username': uname, 'email': email})
+            return render(request, 'signup.html', {'error': 'Username already exists', 'username': uname, 'email': email})
+
         if User.objects.filter(email=email).exists():
-            error = 'Email already registered'
-            return render(request, 'signup.html', {'error': error, 'username': uname, 'email': email})
-        user = User.objects.create(username=uname, email=email)
-        user.set_password(pass1)
+            return render(request, 'signup.html', {'error': 'Email already registered', 'username': uname, 'email': email})
+
+        user = User.objects.create_user(username=uname, email=email, password=pass1)
+        user.is_active = False  # ✅ Make account inactive until email is verified
         user.save()
-        messages.success(request, 'Account created successfully. You can now log in.')
-        return redirect('signin')
+
+        # ✅ Generate email verification link
+        uid = urlsafe_base64_encode(force_bytes(user.pk))
+        token = default_token_generator.make_token(user)
+        verification_link = request.build_absolute_uri(f'/verify-email/{uid}/{token}/')
+
+        # ✅ Send Verification Email
+        subject = "Verify Your Email - College Enquiry Chatbot"
+        message = render_to_string('email_verification.html', {'verification_link': verification_link, 'user': user})
+        send_mail(subject, message, settings.EMAIL_HOST_USER, [email], fail_silently=False)
+
+        # ✅ Show success message on the same page
+        return render(request, 'signup.html', {
+            'success': f"An email verification link has been sent to {email}. Please check your email to verify your account.",
+            'username': uname,
+            'email': email
+        })
+
     return render(request, 'signup.html')
+
+
+
+# ✅ Secure Login with Email Verification Check
+def signin(request):
+    if request.method == 'POST':
+        uname = request.POST.get('username')
+        pass1 = request.POST.get('password')
+        user = authenticate(request, username=uname, password=pass1)
+
+        if user is not None:
+            if user.is_active:  # ✅ Check if the account is verified
+                login(request, user)
+                messages.success(request, "Login successful!")
+                return redirect('/')
+            else:
+                messages.error(request, "Your email is not verified. Please check your email.")
+                return redirect('signin')
+        else:
+            messages.error(request, "Invalid username or password.")
+            return render(request, 'login.html', {'username': uname})
+
+    return render(request, 'login.html')
+
+
+
+# ✅ Verify Email Function
+def verify_email(request, uidb64, token):
+    try:
+        uid = force_str(urlsafe_base64_decode(uidb64))
+        user = User.objects.get(pk=uid)
+    except (TypeError, ValueError, OverflowError, User.DoesNotExist):
+        user = None
+
+    if user and default_token_generator.check_token(user, token):
+        user.is_active = True  # ✅ Activate user
+        user.save()
+        return render(request, 'verification_success.html', {'username': user.username})  # ✅ Show confirmation page
+    else:
+        return HttpResponse("Invalid or expired verification link.", status=400)
+
+
+from django.contrib.auth import logout
+from django.shortcuts import redirect
+from django.contrib import messages
+
+# ✅ Secure Logout Function
+def signout(request):
+    logout(request)  # Ends user session
+    messages.success(request, "You have successfully logged out.")
+    return redirect('signin')  # Redirect to the sign-in page
 
 
 

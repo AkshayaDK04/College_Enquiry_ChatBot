@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 import os
 from pathlib import Path
+import environ
+env = environ.Env()
+environ.Env.read_env()
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -28,6 +31,19 @@ SECRET_KEY = 'django-insecure-hq)(&*dl%%&l0)rg__r-!x!&ovukfq$3$vw!znsx14)51*13l7
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
+
+
+
+
+# ✅ Email Configuration for Verification (Use SMTP)
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'  # Use your email provider's SMTP server
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+EMAIL_HOST_USER = env("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD") # Replace with an App Password, not your main password
+
 
 
 # Application definition
@@ -118,9 +134,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = "/static/"
 
-STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles_build','static')
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "members", "static"),  # ✅ Add this line
+]
+
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 
 # Default primary key field type
